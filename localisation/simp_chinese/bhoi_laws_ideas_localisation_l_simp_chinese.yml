@@ -1,0 +1,5 @@
+l_simp_chinese:
+  #LAWS
+  scattered_resistance:0 "分散抵抗"
+  foreign_relief:0 "外国援助"
+  supported_economy:0 "受支持的经济"

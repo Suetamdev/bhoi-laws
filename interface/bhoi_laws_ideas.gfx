@@ -1,0 +1,17 @@
+spriteTypes = {
+	#Scattered Resistance
+	spriteType = {
+		name = "GFX_idea_scattered_resistance"
+		texturefile = "gfx/interface/ideas/laws/bhoi_laws_scattered_resistance.dds"
+	}
+	#Foreign Relief
+	spriteType = {
+		name = "GFX_idea_foreign_relief"
+		texturefile = "gfx/interface/ideas/laws/bhoi_laws_foreign_relief.dds"
+	}
+	#Supported Economy
+	spriteType = {
+		name = "GFX_idea_supported_economy"
+		texturefile = "gfx/interface/ideas/laws/bhoi_laws_supported_economy.dds"
+	}
+}

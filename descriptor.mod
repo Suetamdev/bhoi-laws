@@ -3,4 +3,5 @@ tags={
 	"Balance"
 }
 name="BHOI - Laws"
-supported_version="1.16.9"
+supported_version="1.17.*"
+remote_file_id="3563646822"

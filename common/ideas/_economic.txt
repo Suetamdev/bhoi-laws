@@ -11,7 +11,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.75
+				consumer_goods_expected_value = 0.5
 				production_speed_industrial_complex_factor = 0.5
 				production_speed_arms_factory_factor = -0.5
 				production_speed_dockyard_factor = -0.5
@@ -195,6 +195,21 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
+						}
+					}
+				}
 			}
 			on_add = {
 				if = {
@@ -216,7 +231,6 @@ ideas = {
 				production_speed_arms_factory_factor = -0.1
 				fuel_gain_factor = -0.25
 				factory_energy_consumption = -0.15
-				unit_medal_effectiveness = -0.60
 			}
 
 			cancel_if_invalid = no
@@ -311,6 +325,21 @@ ideas = {
 							has_active_mission = TUR_etatism_crisis_1
 							has_active_mission = TUR_etatism_crisis_3
 							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
+				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
 						}
 					}
 				}
@@ -503,6 +532,21 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
+						}
+					}
+				}
 			}
 
 			cost = 150
@@ -684,6 +728,21 @@ ideas = {
 							has_active_mission = TUR_etatism_crisis_1
 							has_active_mission = TUR_etatism_crisis_2
 							has_active_mission = TUR_etatism_crisis_3
+						}
+					}
+				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
 						}
 					}
 				}

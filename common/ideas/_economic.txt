@@ -11,7 +11,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.75
+				consumer_goods_expected_value = 0.5
 				production_speed_industrial_complex_factor = 0.5
 				production_speed_arms_factory_factor = -0.5
 				production_speed_dockyard_factor = -0.5
@@ -113,6 +113,27 @@ ideas = {
 			default = yes
 
 			cancel_if_invalid = no
+
+			on_add = {
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = SIA
+					}
+					if = {
+						limit = { check_variable = { SIA_current_economy_law > 0 } }
+						SIA_increase_civilian_approval = yes
+						SIA_decrease_military_approval = yes
+
+					}
+					else = {
+						SIA_increase_military_approval = yes
+						SIA_decrease_civilian_approval = yes
+					}
+
+					set_variable = { SIA_current_economy_law = 0 }
+				}
+			}
 		}
 
 		low_economic_mobilisation = {
@@ -195,6 +216,21 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
+						}
+					}
+				}
 			}
 			on_add = {
 				if = {
@@ -204,6 +240,24 @@ ideas = {
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
+				}
+
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = SIA
+					}
+					if = {
+						limit = { check_variable = { SIA_current_economy_law > 1 } }
+						SIA_decrease_military_approval = yes
+						SIA_increase_civilian_approval = yes
+					}
+					else = {
+						SIA_increase_military_approval = yes
+						SIA_decrease_civilian_approval = yes
+					}
+
+					set_variable = { SIA_current_economy_law = 1 }
 				}
 			}
 
@@ -216,7 +270,6 @@ ideas = {
 				production_speed_arms_factory_factor = -0.1
 				fuel_gain_factor = -0.25
 				factory_energy_consumption = -0.15
-				unit_medal_effectiveness = -0.60
 			}
 
 			cancel_if_invalid = no
@@ -314,6 +367,21 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
+						}
+					}
+				}
 			}
 
 			cost = 150
@@ -336,6 +404,24 @@ ideas = {
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
+				}
+
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = SIA
+					}
+					if = {
+						limit = { check_variable = { SIA_current_economy_law > 2 } }
+						SIA_decrease_military_approval = yes
+						SIA_increase_civilian_approval = yes
+					}
+					else = {
+						SIA_increase_military_approval = yes
+						SIA_decrease_civilian_approval = yes
+					}
+
+					set_variable = { SIA_current_economy_law = 2 }
 				}
 			}
 			ai_will_do = {
@@ -503,6 +589,21 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
+						}
+					}
+				}
 			}
 
 			cost = 150
@@ -525,6 +626,24 @@ ideas = {
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
+				}
+
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = SIA
+					}
+					if = {
+						limit = { check_variable = { SIA_current_economy_law > 3 } }
+						SIA_decrease_military_approval = yes
+						SIA_increase_civilian_approval = yes
+					}
+					else = {
+						SIA_increase_military_approval = yes
+						SIA_decrease_civilian_approval = yes
+					}
+
+					set_variable = { SIA_current_economy_law = 3 }
 				}
 			}
 			ai_will_do = {
@@ -687,6 +806,21 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						original_tag = CZE
+						has_dlc = "Peace For Our Time"
+					}
+					custom_trigger_tooltip = {
+						tooltip = CZE_bop_no_industrialists_tt
+						NOT = {
+							OR = {
+								has_idea = CZE_industrialists_veto
+								has_idea = CZE_industrialists_veto_2
+							}
+						}
+					}
+				}
 			}
 			on_add = {
 				if = {
@@ -696,6 +830,24 @@ ideas = {
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
+				}
+
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = SIA
+					}
+					if = {
+						limit = { check_variable = { SIA_current_economy_law > 4 } }
+						SIA_decrease_military_approval = yes
+						SIA_increase_civilian_approval = yes
+					}
+					else = {
+						SIA_increase_military_approval = yes
+						SIA_decrease_civilian_approval = yes
+					}
+
+					set_variable = { SIA_current_economy_law = 4 }
 				}
 			}
 			ai_will_do = {
@@ -1117,6 +1269,28 @@ ideas = {
 					is_in_faction_with = GER
 				}
    			}
+
+   			on_add = {
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = SIA
+					}
+					if = {
+						limit = { check_variable = { SIA_current_trade_law > 0 } }
+
+
+						SIA_increase_civilian_approval = yes
+						SIA_decrease_military_approval = yes
+					}
+					else = {
+						SIA_increase_military_approval = yes
+						SIA_decrease_civilian_approval = yes
+					}
+
+					set_variable = { SIA_current_trade_law = 0 }
+				}
+   			}
 		}
 
 		export_focus = {
@@ -1194,6 +1368,28 @@ ideas = {
 				modifier = {
 					factor = 1000
 					has_idea = uncontrolled_exports #Poland should try and escape this as soon as they can
+				}
+   			}
+
+   			on_add = {
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = SIA
+					}
+					if = {
+						limit = { check_variable = { SIA_current_trade_law > 1 } }
+
+
+						SIA_increase_civilian_approval = yes
+						SIA_decrease_military_approval = yes
+					}
+					else = {
+						SIA_increase_military_approval = yes
+						SIA_decrease_civilian_approval = yes
+					}
+
+					set_variable = { SIA_current_trade_law = 1 }
 				}
    			}
 		}
@@ -1314,13 +1510,44 @@ ideas = {
 					}
 				}
    			}
+
+   			on_add = {
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = SIA
+					}
+					if = {
+						limit = { check_variable = { SIA_current_trade_law > 2 } }
+
+
+						SIA_decrease_military_approval = yes
+						SIA_increase_civilian_approval = yes
+					}
+					else = {
+						SIA_increase_military_approval = yes
+						SIA_decrease_civilian_approval = yes
+					}
+
+					set_variable = { SIA_current_trade_law = 2 }
+				}
+   			}
 		}
 
 		autarkic_economy = {
 			visible = {
-				original_tag = GER
-				has_completed_focus = GER_autarky_efforts
-				NOT = { has_completed_focus = GER_autarky_achieved }
+				OR = {
+					AND = {
+						original_tag = GER
+						has_completed_focus = GER_autarky_efforts
+						NOT = { has_completed_focus = GER_autarky_achieved }
+					}
+					AND = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = AST
+						has_completed_focus = AST_autarky
+					}
+				}
 			}
 
 			available = {
@@ -1402,7 +1629,10 @@ ideas = {
 		}
 
 		closed_economy = {
+
+
 			available = {
+
 				has_war = yes
 
 				IF = {
@@ -1462,6 +1692,7 @@ ideas = {
 					}
 					NOT = { has_idea = CHI_nine_power_treaty }
 				}
+
 			}
 
 			rule = {
@@ -1515,6 +1746,28 @@ ideas = {
 						has_idea = autarkic_economy
 						has_idea = autarkic_economy_improved
 					}
+				}
+   			}
+
+   			on_add = {
+				if = {
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						original_tag = SIA
+					}
+					if = {
+						limit = { check_variable = { SIA_current_trade_law > 3 } }
+
+
+						SIA_decrease_military_approval = yes
+						SIA_increase_civilian_approval = yes
+					}
+					else = {
+						SIA_increase_military_approval = yes
+						SIA_decrease_civilian_approval = yes
+					}
+
+					set_variable = { SIA_current_trade_law = 3 }
 				}
    			}
 		}
